@@ -14,7 +14,7 @@ Group:		Applications/Databases
 Source0:	ftp://moulon.inra.fr/pub/ruby/plruby.tar.gz
 # Source0-md5:	0711a9da6154942ed898ccf67f5dd6c7
 BuildRequires:	ruby-devel
-BuildRequires:	postgresql-devel
+BuildRequires:	postgresql-backend-devel
 Requires:	postgresql = %{postgresql_version}-%{postgresql_release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,7 +38,7 @@ run createlang command.
 
 %build
 ruby extconf.rb \
-	--with-pgsql-include=/usr/include \
+	--with-pgsql-include=/usr/include/postgresql \
 	--with-pgsql-lib=/usr/lib
 
 %{__make}
@@ -64,6 +64,9 @@ mv $RPM_BUILD_ROOT/%{ruby_archdir}/plruby.so $RPM_BUILD_ROOT/%{_libdir}/postgres
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: postgresql-module-plruby.spec,v $
-Revision 1.1  2005-03-16 20:56:01  aredridel
+Revision 1.2  2005-03-16 21:00:19  aredridel
+- BR: postgresql-backend-devel
+
+Revision 1.1  2005/03/16 20:56:01  aredridel
 - added
 - STBR
