@@ -5,8 +5,8 @@
 
 
 Summary:	PL/Ruby - PostgreSQL procedural language
-Summary(pl):	PL/Ruby jêzyk proceduralny bazy danych PostgreSQL
-Name:	postgresql-module-plruby
+Summary(pl):	PL/Ruby - jêzyk proceduralny bazy danych PostgreSQL
+Name:		postgresql-module-plruby
 Version:	0.4.3
 Release:	1
 License:	Ruby's
@@ -64,7 +64,10 @@ mv $RPM_BUILD_ROOT/%{ruby_archdir}/plruby.so $RPM_BUILD_ROOT/%{_libdir}/postgres
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: postgresql-module-plruby.spec,v $
-Revision 1.2  2005-03-16 21:00:19  aredridel
+Revision 1.3  2005-03-17 09:18:29  spider
+- cosmetics
+
+Revision 1.2  2005/03/16 21:00:19  aredridel
 - BR: postgresql-backend-devel
 
 Revision 1.1  2005/03/16 20:56:01  aredridel
