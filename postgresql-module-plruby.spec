@@ -18,7 +18,7 @@ Requires:	postgresql = %{postgresql_version}-%{postgresql_release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-From PostgreSQL documentation.
+From PostgreSQL documentation:
 
 Postgres supports the definition of procedural languages. In the case
 of a function or trigger procedure defined in a procedural language,
@@ -32,10 +32,7 @@ To enable PL/Ruby procedural language for your database you have to
 run createlang command.
 
 %description -l pl
-
-%prep
-%setup -q -n plruby-%{version}
-Z dokumentacji PostgreSQL.
+Z dokumentacji PostgreSQL:
 
 Postgres ma wsparcie dla jêzyków proceduralnych. W przypadku, kiedy
 programista zdefiniuje procedurê wyzwalacza lub funkcjê w jêzyku
@@ -47,6 +44,9 @@ potrzeby.
 
 Za pomoc± polecenia createlang mo¿na dodaæ obs³ugê jêzyka
 proceduralnego PL/Ruby dla swojej bazy danych.
+
+%prep
+%setup -q -n plruby-%{version}
 
 %build
 ruby extconf.rb \
@@ -77,7 +77,10 @@ mv -f $RPM_BUILD_ROOT%{ruby_archdir}/plruby.so $RPM_BUILD_ROOT%{_libdir}/postgre
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: postgresql-module-plruby.spec,v $
-Revision 1.4  2005-03-18 21:40:29  qboosh
+Revision 1.5  2005-03-18 21:46:14  qboosh
+- grr, fixed
+
+Revision 1.4  2005/03/18 21:40:29  qboosh
 - pl, cleanup
 
 Revision 1.3  2005/03/17 09:18:29  spider
