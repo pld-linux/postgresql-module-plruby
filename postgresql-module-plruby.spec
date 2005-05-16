@@ -1,5 +1,5 @@
 #
-%define		postgresql_version	8.0.1
+%define		postgresql_version	8.0.3
 %define		postgresql_release	2
 %define		ruby_archdir		%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
 
@@ -51,7 +51,8 @@ proceduralnego PL/Ruby dla swojej bazy danych.
 %build
 ruby extconf.rb \
 	--with-pgsql-include=/usr/include/postgresql \
-	--with-pgsql-lib=/usr/%{_lib}
+	--with-pgsql-lib=/usr/%{_lib} \
+	--with-pgsql-version=80
 
 %{__make}
 
@@ -77,7 +78,10 @@ mv -f $RPM_BUILD_ROOT%{ruby_archdir}/plruby.so $RPM_BUILD_ROOT%{_libdir}/postgre
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: postgresql-module-plruby.spec,v $
-Revision 1.5  2005-03-18 21:46:14  qboosh
+Revision 1.6  2005-05-16 23:09:02  aredridel
+- build against 8.0.3-2
+
+Revision 1.5  2005/03/18 21:46:14  qboosh
 - grr, fixed
 
 Revision 1.4  2005/03/18 21:40:29  qboosh
