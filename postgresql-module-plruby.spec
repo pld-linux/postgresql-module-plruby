@@ -10,9 +10,10 @@ Group:		Applications/Databases
 Source0:	ftp://moulon.inra.fr/pub/ruby/plruby.tar.gz
 # Source0-md5:	0711a9da6154942ed898ccf67f5dd6c7
 BuildRequires:	postgresql-backend-devel
-BuildRequires:	rpmbuild(macros) >= 1.272
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
 %requires_eq_to postgresql postgresql-backend-devel
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
