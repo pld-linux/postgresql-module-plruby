@@ -1,7 +1,7 @@
 # TODO
 # - doesn't build
 Summary:	PL/Ruby - PostgreSQL procedural language
-Summary(pl.UTF-8):   PL/Ruby - język proceduralny bazy danych PostgreSQL
+Summary(pl.UTF-8):	PL/Ruby - język proceduralny bazy danych PostgreSQL
 Name:		postgresql-module-plruby
 Version:	0.4.3
 Release:	0.1
