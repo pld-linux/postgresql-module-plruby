@@ -65,6 +65,9 @@ install -d $RPM_BUILD_ROOT%{_libdir}/postgresql
 
 mv -f $RPM_BUILD_ROOT%{ruby_archdir}/plruby.so $RPM_BUILD_ROOT%{_libdir}/postgresql
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %doc README.en
